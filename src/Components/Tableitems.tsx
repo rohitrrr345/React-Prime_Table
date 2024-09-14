@@ -42,6 +42,23 @@ const Tableitems = () => {
   useEffect(() => {
     fetchData(page);
   }, [page]);
+  // useEffect(() => {
+  //   const response= async (page: number) => {
+  //     setLoading(true);
+  //     try {
+  //       const response = await axios.get(`https://api.artic.edu/api/v1/artworks?page=${page}`);
+  //       const data = response.data;
+  //       setval(data.data);
+  //       setTotalRecords(data.pagination.total);
+  //     } catch (error) {
+  //       console.error('Error:', error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchData(page);
+  // }, [page]);
+
 
   useEffect(() => {
     const saveditems = localStorage.getItem('selectedArtworks');
@@ -57,7 +74,7 @@ const Tableitems = () => {
   const onPageChange = (event: any) => {
     setPage(event.page + 1); 
   };
-
+// const
   const openOverlay = () => {
     setvisible(true);
   };
